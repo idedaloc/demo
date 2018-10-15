@@ -1,0 +1,9 @@
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/model/Post.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/controller/PostController.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/controller/CommentController.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/model/Comment.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/repository/PostRepository.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/repository/CommentRepository.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/demo/JpaOneToManyDemoApplication.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/model/AuditModel.java
+/home/dedaloc2/eclipse-workspace/demo/src/main/java/exception/ResourceNotFoundException.java
