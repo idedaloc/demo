@@ -24,7 +24,7 @@ public class PostController {
     }
  
 
-    @PostMapping("/posts")
+    @PostMapping(path = "/posts", consumes = "application/json", produces = "application/json")
     public Post createPost(@Valid @RequestBody Post post) {
         return postRepository.save(post);
     }
