@@ -10,6 +10,8 @@ import demo.exception.ResourceNotFoundException;
 import demo.model.Post;
 import demo.repository.PostRepository;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 @RestController
@@ -19,8 +21,9 @@ public class PostController {
     PostRepository postRepository;
 
     @GetMapping("/posts")
-    public Page<Post> getAllPosts(Pageable pageable) {
-        return postRepository.findAll(pageable);
+    public ResponseEntity<Page<Post>> getAllPosts(Pageable pageable) {
+        return ResponseEntity.ok(Optional.ofNullable(postRepository.findAll(pageable))
+        		.orElseThrow(() -> new ResourceNotFoundException("Posts not found")));
     }
  
 
@@ -47,5 +50,4 @@ public class PostController {
             return ResponseEntity.ok().build();
         }).orElseThrow(() -> new ResourceNotFoundException("PostId " + postId + " not found"));
     }
-
 }

@@ -42,6 +42,14 @@ public class JpaOneToManyDemoApplication implements CommandLineRunner{
 		
 		postRepository.save(post);
 		
+		Post post2 = new Post();
+		post2.setTitle("Test3");
+		post2.setContent("Contetn3");
+		post2.setDescription("To Test3");
+		
+		postRepository.save(post2);
+		
+		
 //		Tag post = new Tag();
 //		post.setName("Test");
 //	
