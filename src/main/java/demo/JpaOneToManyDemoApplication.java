@@ -36,14 +36,14 @@ public class JpaOneToManyDemoApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 
 		Post post = new Post();
-		post.setTitle("Test234");
+		post.setTitle("Test45");
 		post.setContent("Contetnasdf");
 		post.setDescription("To Testsadf");
 		
 		postRepository.save(post);
 		
 		Post post2 = new Post();
-		post2.setTitle("Test3");
+		post2.setTitle("Test345");
 		post2.setContent("Contetn3");
 		post2.setDescription("To Test3");
 		

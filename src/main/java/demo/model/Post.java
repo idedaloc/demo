@@ -34,7 +34,7 @@ public class Post extends AuditModel {
 
     @NotNull
     @Size(max = 100)
-    @Column(unique = true)
+    //@Column(unique = true)
     private String title;
 
     @NotNull

@@ -1,7 +1,12 @@
+services:
+- cf-spark-db
+
 applications:
 - name: CFDemo
   path: target/jpa-one-to-many-demo-0.0.1-SNAPSHOT.jar 
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   memory: 1G
-  services:
-      - cf-spark-db
+
+env: 
+  spring_jpa_hibernate_ddl-auto: update
+  
