@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
@@ -17,7 +18,7 @@ import demo.repository.PostRepository;
 @EnableJpaAuditing
 //@EnableJpaRepositories
 //@EntityScan(basePackages = {"demo.model"})
-public class JpaOneToManyDemoApplication implements CommandLineRunner{
+public class JpaOneToManyDemoApplication extends SpringBootServletInitializer implements CommandLineRunner{
 	
 	@Autowired
 	private PostRepository postRepository;
