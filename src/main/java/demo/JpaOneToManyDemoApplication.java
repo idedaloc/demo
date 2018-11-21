@@ -18,7 +18,7 @@ import demo.repository.PostRepository;
 @EnableJpaAuditing
 //@EnableJpaRepositories
 //@EntityScan(basePackages = {"demo.model"})
-public class JpaOneToManyDemoApplication extends SpringBootServletInitializer implements CommandLineRunner{
+public class JpaOneToManyDemoApplication implements CommandLineRunner{
 	
 	@Autowired
 	private PostRepository postRepository;
