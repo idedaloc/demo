@@ -26,6 +26,11 @@ public class PostController {
         		.orElseThrow(() -> new ResourceNotFoundException("Posts not found")));
     }
  
+    @GetMapping("/posts/{id}")
+    public ResponseEntity<Post> getPost(@PathVariable Long id) {
+        return ResponseEntity.ok(postRepository.findById(id)
+        		.orElseThrow(() -> new ResourceNotFoundException("Posts not found")));
+    }
 
     @PostMapping(path = "/posts", consumes = "application/json", produces = "application/json")
     public Post createPost(@Valid @RequestBody Post post) {
